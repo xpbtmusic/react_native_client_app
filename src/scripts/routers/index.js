@@ -16,7 +16,8 @@ const TabbarNavigator = TabNavigator({
     Card: { screen: Card },
     UserCenter: { screen: UserCenter }
 }, {
-    initialRouteName: 'Home'
+    initialRouteName: 'Home',
+    tabBarPosition: 'bottom'
 });
 
 const AppNavigator = StackNavigator({
