@@ -51,14 +51,14 @@ class Home extends Component {
     _keyExtractor = (item, index) => item.id;
     _renderItem = ({item}) => (
         <View style={topicCard.card}>
-            <Image style={topicCard.cover} source={{uri: item.thumbnail}}></Image>
+            <Image style={topicCard.cover} source={{uri: item.owner.avatar_url}}></Image>
             <TouchableHighlight
                 style={topicCard.title}
                 onPress={this._onPressItem.bind(this, item.id)}>
-                <Text numberOfLines={1} style={topicCard.titleText}>{item.title}</Text>
+                <Text numberOfLines={1} style={topicCard.titleText}>{item.full_name}</Text>
             </TouchableHighlight>
             <View style={topicCard.desc}>
-                <Text numberOfLines={2} style={topicCard.descText}>{item.desc}</Text>
+                <Text numberOfLines={2} style={topicCard.descText}>{item.description}</Text>
             </View>
         </View>
     );
