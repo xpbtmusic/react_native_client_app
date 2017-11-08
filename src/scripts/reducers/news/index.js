@@ -14,5 +14,31 @@ export default handleActions({
         throw(state, action) {
             return { ret: false, statusText: action.payload, data: [] };
         }
+    },
+
+    START_REQUEST:{
+        next(state, action) {
+            return {refreshing: true}
+        }
+    },
+    RESET_REQUEST:{
+        next(state, action) {
+            return {refreshing: false}
+        }
+    },
+    FINISH_REQUEST:{
+        next(state, action) {
+            return {refreshing: false}
+        }
+    },
+    ENABLE_REQUEST:{
+        next(state, action) {
+            return {refreshing: true}
+        }
+    },
+    DISABLE_REQUEST:{
+        next(state, action) {
+            return {refreshing: false}
+        }
     }
 }, { ret: true, statusText: '', data: [] });

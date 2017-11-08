@@ -14,6 +14,7 @@ const preLoadingAction=createAction(PRE_LOADING);
            .then(response => response.json()))*/
 
 export var fetchNewsList = createAction(FETCH_NEWS_LIST, () => {
+    preLoadingAction();
     return fetch('https://api.github.com/search/repositories?q=java&sort=stars')
         .then(response => response.json());
 
