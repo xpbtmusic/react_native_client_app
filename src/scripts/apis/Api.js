@@ -1,5 +1,6 @@
 const url='https://api.github.com';
 const QUERY_STR = '&sort=stars';
+import {getApi} from './HttpRequest'
 
 var Api={};
 var token;
@@ -15,6 +16,9 @@ Api.getHomeData=function (keyWords,callback) {
 
     sendHttpRequest('/search/repositories?q='+keyWords+'&sort=stars', 'GET', null, callback, callback);
 
+}
+export function getHomeInfos ({q='',sort=''}) {
+    return getApi('/search/repositories', {q,sort})
 }
 function sendHttpRequest(relativeUrl, method, body, success, error) {
     body = (!body ? body : JSON.stringify(body));
@@ -70,4 +74,3 @@ function sendHttpRequestWithUploadImage(relativeUrl, method, body, success, erro
         .then((responseData) => success(responseData))
         .catch((err) => error(err));
 }
-module.exports=Api;

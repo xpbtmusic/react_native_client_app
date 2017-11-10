@@ -14,6 +14,7 @@ import { common, topicCard } from '../../../styles';
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
 import * as newsActions from '../../actions/news';
+import Logger from "../../apis/logger";
 
 class Home extends Component {
     constructor(props) {
@@ -63,6 +64,7 @@ class Home extends Component {
         </View>
     );
     render() {
+        Logger.info("----"+JSON.stringify(this.props.news.data))
         return (
             <View style={[common.containerFixHeight, common.springWoodBg]}>
                 <FlatList

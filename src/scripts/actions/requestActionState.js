@@ -8,9 +8,9 @@ DISABLE_REQUEST
 
 import { createAction } from 'redux-actions';
 
-const startRequest=createAction(START_REQUEST);
-const resetRequest=createAction(RESET_REQUEST);
-const finishRequest=createAction(FINISH_REQUEST);
-const enableRequest=createAction(ENABLE_REQUEST);
+export const startRequest=createAction(START_REQUEST);
+export const resetRequest=createAction(RESET_REQUEST);
+export const finishedRequest=createAction(FINISH_REQUEST);
+export const enableRequest=createAction(ENABLE_REQUEST);
 
-const disableRequest=createAction(DISABLE_REQUEST);
+export const disableRequest=createAction(DISABLE_REQUEST);
