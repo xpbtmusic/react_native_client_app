@@ -9,6 +9,7 @@ import Category from '../components/Category';
 import Card from '../components/Card';
 import UserCenter from '../components/UserCenter';
 import NewsDetail from '../components/NewsDetail';
+import LoginScreen from "../components/Login/Login";
 
 const TabbarNavigator = TabNavigator({
     Home: { screen: Home },
@@ -21,6 +22,9 @@ const TabbarNavigator = TabNavigator({
 });
 
 const AppNavigator = StackNavigator({
+    Login: {
+        screen: LoginScreen
+    },
     TabBar: {
         screen: TabbarNavigator,
         navigationOptions: {
