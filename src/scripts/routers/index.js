@@ -9,7 +9,7 @@ import Category from '../components/Category';
 import Card from '../components/Card';
 import UserCenter from '../components/UserCenter';
 import NewsDetail from '../components/NewsDetail';
-import LoginScreen from "../components/Login/Login";
+import LoginScreen from "../components/Login/LoginScreen";
 
 const TabbarNavigator = TabNavigator({
     Home: { screen: Home },
